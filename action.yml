@@ -1,0 +1,12 @@
+name: 'Update labels from PRs'
+description: 'Set labels on PR from associated PRs'
+inputs:
+  current-pr-number:  # id of input
+    description: 'PR number on which labels must be set'
+    required: true
+  interesting-labels:
+    description: 'Labels sought. Must be separated by ',' ie. 'infra,sqitch''
+    required: true
+runs:
+  using: 'node16'
+  main: 'index.js'
