@@ -1,7 +1,7 @@
 name: 'Update labels from PRs'
 description: 'Set labels on PR from associated PRs'
 inputs:
-  current-pr-number:  # id of input
+  current-pr-number:
     description: 'PR number on which labels must be set'
     required: true
   interesting-labels:
