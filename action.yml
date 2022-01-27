@@ -5,7 +5,7 @@ inputs:
     description: 'PR number on which labels must be set'
     required: true
   interesting-labels:
-    description: 'Labels sought. Must be separated by ',' ie. 'infra,sqitch''
+    description: 'Labels sought. Must be separated by , ie. ''infra,sqitch'''
     required: true
 runs:
   using: 'node16'
