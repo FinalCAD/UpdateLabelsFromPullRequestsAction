@@ -1,7 +1,7 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
 
-const githubToken = "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";//process.env.GITHUB_TOKEN;
+const githubToken = process.env.GITHUB_TOKEN;
 const ghClient = new github.getOctokit(githubToken);
 
 async function getCurrentPullRequestId(owner, repo, pull_number) {
