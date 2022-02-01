@@ -8471,7 +8471,7 @@ var __webpack_exports__ = {};
 const core = __nccwpck_require__(1366);
 const github = __nccwpck_require__(5909);
 
-const githubToken = process.env.GITHUB_TOKEN;
+const githubToken = core.getInput('repo-token');
 const ghClient = new github.getOctokit(githubToken);
 
 async function getCurrentPullRequestId(owner, repo, pull_number) {

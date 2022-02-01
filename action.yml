@@ -7,6 +7,9 @@ inputs:
   interesting-labels:
     description: 'Labels sought. Must be separated by , ie. ''infra,sqitch'''
     required: true
+  repo-token:
+    description: 'Github token to call API'
+    required: true
 runs:
   using: 'node16'
   main: 'dist/index.js'
