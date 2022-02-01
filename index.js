@@ -93,7 +93,7 @@ async function run() {
   const context = await github.context;
   let owner = context.payload.repository.full_name.split('/')[0];
   let repo = context.payload.repository.full_name.split('/')[1];
-  let currentPullRequestNumber = core.getInput('initial-pr-number');
+  let currentPullRequestNumber = core.getInput('current-pr-number');
   let labelsToFind = core.getInput('interesting-labels').split(',');
   console.info("Labels wanted : " + labelsToFind.join(','));
 
