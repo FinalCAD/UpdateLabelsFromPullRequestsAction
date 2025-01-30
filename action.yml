@@ -3,13 +3,18 @@ description: 'Set labels on PR from associated PRs'
 inputs:
   current-pr-number:
     description: 'PR number on which labels must be set'
-    required: true
+    default: ''
   interesting-labels:
     description: 'Labels sought. Must be separated by , ie. ''infra,sqitch'''
-    required: true
+    default: ''
   repo-token:
     description: 'Github token to call API'
-    required: true
+    default: ''
 runs:
-  using: 'node16'
-  main: 'dist/index.js'
+  using: 'composite'
+  steps:
+    - name: Deprecated version of FinalCAD/UpdateLabelsFromPullRequestsAction
+      shell: bash
+      run: |
+        echo '::error title=Deprecated version of FinalCAD/UpdateLabelsFromPullRequestsAction::This version of FinalCAD/UpdateLabelsFromPullRequestsAction is deprecated use `v1` instead.'
+        exit 1
